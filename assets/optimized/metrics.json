@@ -1,0 +1,170 @@
+[
+  {
+    "source": "logo.png",
+    "sourceBytes": 1051283,
+    "sourceSize": [
+      1536,
+      1024
+    ],
+    "output": "assets/optimized/logo.webp",
+    "outputBytes": 22986,
+    "outputSize": [
+      480,
+      320
+    ]
+  },
+  {
+    "source": "background.png",
+    "sourceBytes": 1486318,
+    "sourceSize": [
+      1953,
+      805
+    ],
+    "output": "assets/optimized/background.webp",
+    "outputBytes": 48400,
+    "outputSize": [
+      1600,
+      659
+    ]
+  },
+  {
+    "source": "assets/products/changan-logo.webp",
+    "sourceBytes": 346854,
+    "sourceSize": [
+      3840,
+      2160
+    ],
+    "output": "assets/optimized/changan-logo.webp",
+    "outputBytes": 17256,
+    "outputSize": [
+      360,
+      203
+    ]
+  },
+  {
+    "source": "assets/products/haval-logo.webp",
+    "sourceBytes": 91487,
+    "sourceSize": [
+      1920,
+      1064
+    ],
+    "output": "assets/optimized/haval-logo.webp",
+    "outputBytes": 6018,
+    "outputSize": [
+      360,
+      200
+    ]
+  },
+  {
+    "source": "assets/products/honda-logo.webp",
+    "sourceBytes": 442249,
+    "sourceSize": [
+      3840,
+      2160
+    ],
+    "output": "assets/optimized/honda-logo.webp",
+    "outputBytes": 16734,
+    "outputSize": [
+      360,
+      203
+    ]
+  },
+  {
+    "source": "assets/products/hyundai-logo.webp",
+    "sourceBytes": 382310,
+    "sourceSize": [
+      3840,
+      2160
+    ],
+    "output": "assets/optimized/hyundai-logo.webp",
+    "outputBytes": 15066,
+    "outputSize": [
+      360,
+      203
+    ]
+  },
+  {
+    "source": "assets/products/kia-logo.webp",
+    "sourceBytes": 17900,
+    "sourceSize": [
+      3840,
+      2160
+    ],
+    "output": "assets/optimized/kia-logo.webp",
+    "outputBytes": 6452,
+    "outputSize": [
+      360,
+      203
+    ]
+  },
+  {
+    "source": "assets/products/suzuki-logo.webp",
+    "sourceBytes": 12552,
+    "sourceSize": [
+      1080,
+      1080
+    ],
+    "output": "assets/optimized/suzuki-logo.webp",
+    "outputBytes": 11456,
+    "outputSize": [
+      240,
+      240
+    ]
+  },
+  {
+    "source": "assets/products/toyota-logo.webp",
+    "sourceBytes": 481372,
+    "sourceSize": [
+      3840,
+      2160
+    ],
+    "output": "assets/optimized/toyota-logo.webp",
+    "outputBytes": 17018,
+    "outputSize": [
+      360,
+      203
+    ]
+  },
+  {
+    "source": "assets/images/radiators/all-aluminium.webp",
+    "sourceBytes": 240058,
+    "sourceSize": [
+      612,
+      408
+    ],
+    "output": "assets/optimized/all-aluminium.webp",
+    "outputBytes": 44818,
+    "outputSize": [
+      612,
+      408
+    ]
+  },
+  {
+    "source": "assets/images/radiators/copper-brass.webp",
+    "sourceBytes": 421573,
+    "sourceSize": [
+      612,
+      408
+    ],
+    "output": "assets/optimized/copper-brass.webp",
+    "outputBytes": 54948,
+    "outputSize": [
+      612,
+      408
+    ]
+  },
+  {
+    "source": "assets/images/radiators/plastic-aluminium.webp",
+    "sourceBytes": 2351573,
+    "sourceSize": [
+      1536,
+      1024
+    ],
+    "output": "assets/optimized/plastic-aluminium.webp",
+    "outputBytes": 40422,
+    "outputSize": [
+      640,
+      427
+    ]
+  }
+]

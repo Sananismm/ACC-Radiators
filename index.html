@@ -3,45 +3,53 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="ACC Radiators: OE-fit aluminum and copper-brass radiators for every car assembled in Pakistan.">
+<meta name="description" content="ACC Radiators: browse aluminum and copper-brass radiators by vehicle and enquire about fitment and availability.">
 <title>ACC Radiators | Your Car's Cooling Partner</title>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ACC Radiators">
+<meta property="og:title" content="ACC Radiators | Your Car's Cooling Partner">
+<meta property="og:description" content="ACC Radiators: browse aluminum and copper-brass radiators by vehicle and enquire about fitment and availability.">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 <header class="header"><div class="container header__inner">
-<a class="header__logo" href="index.html"><img src="logo.png" alt="ACC Radiators logo"></a>
-<nav class="nav" aria-label="Main">
-<a class="nav__link nav__link--active" href="index.html">Home</a>
+<a class="header__logo" href="index.html"><img src="assets/optimized/logo.webp" width="480" height="320" alt="ACC Radiators logo"></a>
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" hidden>Menu</button>
+<nav class="nav" id="main-nav" aria-label="Main">
+<a class="nav__link nav__link--active" aria-current="page" href="index.html">Home</a>
 <a class="nav__link" href="about.html">About Us</a>
 <a class="nav__link" href="products.html">Products</a>
 <a class="nav__link" href="#contact">Contact</a>
 <a class="btn" href="products.html">Find Your Radiator</a>
 </nav></div></header>
 
-<main>
+<main id="main">
 <section class="hero hero--home"><div class="container">
 <h1 class="hero__title">Your car's <span>cooling partner.</span></h1>
-<p class="hero__sub">High-performance radiators built for Pakistan's 45°C–50°C summers. Made to OE dimensions and specifications for precise fitment across vehicles assembled in Pakistan.</p>
+<p class="hero__sub">Explore radiators for vehicles in Pakistan. Confirm your vehicle's model year, transmission and cooling requirements with ACC before ordering.</p>
 <div class="hero__actions">
 <a class="btn" href="products.html">Browse Radiators</a>
-<a class="btn btn--outline" href="about.html#engineering">OEM Specifications</a>
+<a class="btn btn--outline" href="about.html#engineering">Radiator Engineering</a>
 </div></div></section>
 
 <section class="lookup" aria-label="Quick radiator lookup"><div class="container">
 <form class="lookup__form" id="lookup">
 <span class="lookup__label">Quick lookup</span>
-<select class="select" id="make" aria-label="Select make"><option value="">Select Make</option></select>
-<select class="select" id="model" aria-label="Select model" disabled><option value="">Select Model</option></select>
+<select class="select" id="make" aria-label="Select make"><option value="">All manufacturers</option></select>
+<select class="select" id="model" aria-label="Select model" disabled><option value="">All models</option></select>
 <button class="btn" type="submit">Search Radiators</button>
-</form></div></section>
+</form><p class="lookup__help">Choose a make to see listed models. Leave the model blank to browse all radiators for that make; leave both blank to browse the full catalog. <a id="unlisted-enquiry" href="mailto:info@accradiators.pk">Vehicle not listed? Enquire by email.</a></p></div></section>
 
 <section class="section"><div class="container">
 <h2 class="section__title">Built to <span>hold up in the heat</span></h2>
 <div class="values">
-<article class="value"><p class="value__stat">100%</p><h3 class="card__title">Pressure-leak tested</h3><p class="card__text">Every unit is tested before it ships.</p></article>
-<article class="value"><p class="value__stat">OE</p><h3 class="card__title">Dimensions guaranteed</h3><p class="card__text">Strict fitment tolerances to factory specs.</p></article>
-<article class="value"><p class="value__stat">45°C+</p><h3 class="card__title">Heat dissipation</h3><p class="card__text">14–16 FPI fin density for strong airflow.</p></article>
-<article class="value"><p class="value__stat">Direct</p><h3 class="card__title">Fitment</h3><p class="card__text">Bolt-in replacement, no modification.</p></article>
+<article class="value"><p class="value__stat">Testing</p><h3 class="card__title">Quality assurance</h3><p class="card__text">Ask ACC for the testing details of your selected radiator.</p></article>
+<article class="value"><p class="value__stat">Sizing</p><h3 class="card__title">Core dimensions</h3><p class="card__text">Confirm dimensions against your vehicle's requirements.</p></article>
+<article class="value"><p class="value__stat">Cooling</p><h3 class="card__title">Core construction</h3><p class="card__text">Discuss material and cooling requirements with ACC.</p></article>
+<article class="value"><p class="value__stat">Fitment</p><h3 class="card__title">Vehicle compatibility</h3><p class="card__text">Confirm model year and transmission before ordering.</p></article>
 </div></div></section>
 
 <section class="section section--alt"><div class="container">
@@ -50,18 +58,18 @@
 <div class="grid grid--3">
 <article class="card tech">
   <div class="media">
-    <img src="assets/images/radiators/plastic-aluminium.webp" alt="Plastic-aluminum radiator" onerror="if(!this.dataset.tried){this.dataset.tried='1';this.src='assets/images/radiators/plastic-aluminum.webp';}else{this.remove();}">
+    <img src="assets/optimized/plastic-aluminium.webp" loading="lazy" width="640" height="427" alt="Plastic-aluminum radiator">
     <span class="badge">Plastic-Aluminum</span>
   </div>
   <div class="tech__body">
-    <h3 class="card__title">Brazed aluminum, PA66-GF30 tanks</h3>
+    <h3 class="card__title">Brazed aluminum, plastic tanks</h3>
     <p class="card__text">The modern OE standard for hatchbacks and sedans: light, corrosion resistant and thermally efficient.</p>
   </div>
 </article>
 
 <article class="card tech">
   <div class="media">
-    <img src="assets/images/radiators/all-aluminium.webp" alt="All-aluminum TIG-welded radiator" onerror="if(!this.dataset.tried){this.dataset.tried='1';this.src='assets/images/radiators/all-aluminum.webp';}else{this.remove();}">
+    <img src="assets/optimized/all-aluminium.webp" loading="lazy" width="640" height="427" alt="All-aluminum TIG-welded radiator">
     <span class="badge">All-Aluminum</span>
   </div>
   <div class="tech__body">
@@ -72,7 +80,7 @@
 
 <article class="card tech">
   <div class="media">
-    <img src="assets/images/radiators/copper-brass.webp" alt="Copper-brass radiator" onerror="this.remove()">
+    <img src="assets/optimized/copper-brass.webp" loading="lazy" width="640" height="427" alt="Copper-brass radiator">
     <span class="badge">Copper-Brass</span>
   </div>
   <div class="tech__body">
@@ -84,11 +92,12 @@
 
 <section class="section"><div class="container">
 <h2 class="section__title">Popular <span>assembled models</span></h2>
+<p class="section__intro">Photographs are representative of material types. Confirm fitment and specifications for your vehicle with ACC.</p>
 <div class="grid grid--4">
   <!-- Suzuki Alto -->
   <a class="card" href="products.html?make=Suzuki&amp;model=Alto">
     <div class="media">
-      <img src="assets/images/radiators/plastic-aluminium.webp" alt="Suzuki Alto 660cc Radiator" onerror="if(!this.dataset.tried){this.dataset.tried='1';this.src='assets/images/radiators/plastic-aluminum.webp';}else{this.remove();}">
+      <img src="assets/optimized/plastic-aluminium.webp" loading="lazy" width="640" height="427" alt="Representative radiator image for Suzuki Alto 660cc Radiator">
     </div>
     <h3 class="card__title">Alto 660cc</h3>
     <p class="card__text">Pak Suzuki &bull; Plastic-Aluminum</p>
@@ -97,7 +106,7 @@
   <!-- Suzuki Cultus -->
   <a class="card" href="products.html?make=Suzuki&amp;model=Cultus">
     <div class="media">
-      <img src="assets/images/radiators/plastic-aluminium.webp" alt="Suzuki Cultus Radiator" onerror="if(!this.dataset.tried){this.dataset.tried='1';this.src='assets/images/radiators/plastic-aluminum.webp';}else{this.remove();}">
+      <img src="assets/optimized/plastic-aluminium.webp" loading="lazy" width="640" height="427" alt="Representative radiator image for Suzuki Cultus Radiator">
     </div>
     <h3 class="card__title">Cultus</h3>
     <p class="card__text">Pak Suzuki &bull; Plastic-Aluminum</p>
@@ -106,7 +115,7 @@
   <!-- Suzuki Bolan -->
   <a class="card" href="products.html?make=Suzuki&amp;model=Bolan">
     <div class="media">
-      <img src="assets/images/radiators/copper-brass.webp" alt="Suzuki Bolan Radiator" onerror="this.remove();">
+      <img src="assets/optimized/copper-brass.webp" loading="lazy" width="640" height="427" alt="Representative radiator image for Suzuki Bolan Radiator">
     </div>
     <h3 class="card__title">Bolan</h3>
     <p class="card__text">Pak Suzuki &bull; Copper-Brass</p>
@@ -115,7 +124,7 @@
   <!-- Toyota Corolla -->
   <a class="card" href="products.html?make=Toyota&amp;model=Corolla">
     <div class="media">
-      <img src="assets/images/radiators/plastic-aluminium.webp" alt="Toyota Corolla Altis Radiator" onerror="if(!this.dataset.tried){this.dataset.tried='1';this.src='assets/images/radiators/plastic-aluminum.webp';}else{this.remove();}">
+      <img src="assets/optimized/plastic-aluminium.webp" loading="lazy" width="640" height="427" alt="Representative radiator image for Toyota Corolla Altis Radiator">
     </div>
     <h3 class="card__title">Corolla Altis</h3>
     <p class="card__text">Indus Motor &bull; Plastic-Aluminum</p>
@@ -124,7 +133,7 @@
   <!-- Toyota Yaris -->
   <a class="card" href="products.html?make=Toyota&amp;model=Yaris">
     <div class="media">
-      <img src="assets/images/radiators/plastic-aluminium.webp" alt="Toyota Yaris Radiator" onerror="if(!this.dataset.tried){this.dataset.tried='1';this.src='assets/images/radiators/plastic-aluminum.webp';}else{this.remove();}">
+      <img src="assets/optimized/plastic-aluminium.webp" loading="lazy" width="640" height="427" alt="Representative radiator image for Toyota Yaris Radiator">
     </div>
     <h3 class="card__title">Yaris</h3>
     <p class="card__text">Indus Motor &bull; Plastic-Aluminum</p>
@@ -133,7 +142,7 @@
   <!-- Toyota Hilux -->
   <a class="card" href="products.html?make=Toyota&amp;model=Hilux">
     <div class="media">
-      <img src="assets/images/radiators/all-aluminium.webp" alt="Toyota Hilux Radiator" onerror="if(!this.dataset.tried){this.dataset.tried='1';this.src='assets/images/radiators/all-aluminum.webp';}else{this.remove();}">
+      <img src="assets/optimized/all-aluminium.webp" loading="lazy" width="640" height="427" alt="Representative radiator image for Toyota Hilux Radiator">
     </div>
     <h3 class="card__title">Hilux / Revo</h3>
     <p class="card__text">Indus Motor &bull; All-Aluminum</p>
@@ -142,7 +151,7 @@
   <!-- Honda Civic -->
   <a class="card" href="products.html?make=Honda&amp;model=Civic">
     <div class="media">
-      <img src="assets/images/radiators/plastic-aluminium.webp" alt="Honda Civic Oriel Radiator" onerror="if(!this.dataset.tried){this.dataset.tried='1';this.src='assets/images/radiators/plastic-aluminum.webp';}else{this.remove();}">
+      <img src="assets/optimized/plastic-aluminium.webp" loading="lazy" width="640" height="427" alt="Representative radiator image for Honda Civic Oriel Radiator">
     </div>
     <h3 class="card__title">Civic Oriel</h3>
     <p class="card__text">Honda Atlas &bull; Plastic-Aluminum</p>
@@ -151,7 +160,7 @@
   <!-- Honda City -->
   <a class="card" href="products.html?make=Honda&amp;model=City">
     <div class="media">
-      <img src="assets/images/radiators/plastic-aluminium.webp" alt="Honda City Radiator" onerror="if(!this.dataset.tried){this.dataset.tried='1';this.src='assets/images/radiators/plastic-aluminum.webp';}else{this.remove();}">
+      <img src="assets/optimized/plastic-aluminium.webp" loading="lazy" width="640" height="427" alt="Representative radiator image for Honda City Radiator">
     </div>
     <h3 class="card__title">City 1.2 / 1.5</h3>
     <p class="card__text">Honda Atlas &bull; Plastic-Aluminum</p>
@@ -160,7 +169,7 @@
   <!-- Hyundai Tucson -->
   <a class="card" href="products.html?make=Hyundai&amp;model=Tucson">
     <div class="media">
-      <img src="assets/images/radiators/all-aluminium.webp" alt="Hyundai Tucson Radiator" onerror="if(!this.dataset.tried){this.dataset.tried='1';this.src='assets/images/radiators/all-aluminum.webp';}else{this.remove();}">
+      <img src="assets/optimized/all-aluminium.webp" loading="lazy" width="640" height="427" alt="Representative radiator image for Hyundai Tucson Radiator">
     </div>
     <h3 class="card__title">Tucson</h3>
     <p class="card__text">Hyundai Nishat &bull; All-Aluminum</p>
@@ -169,7 +178,7 @@
   <!-- KIA Sportage -->
   <a class="card" href="products.html?make=KIA&amp;model=Sportage">
     <div class="media">
-      <img src="assets/images/radiators/all-aluminium.webp" alt="KIA Sportage Radiator" onerror="if(!this.dataset.tried){this.dataset.tried='1';this.src='assets/images/radiators/all-aluminum.webp';}else{this.remove();}">
+      <img src="assets/optimized/all-aluminium.webp" loading="lazy" width="640" height="427" alt="Representative radiator image for KIA Sportage Radiator">
     </div>
     <h3 class="card__title">Sportage</h3>
     <p class="card__text">KIA Lucky Motors &bull; All-Aluminum</p>
@@ -178,7 +187,7 @@
   <!-- Changan Alsvin -->
   <a class="card" href="products.html?make=Changan&amp;model=Alsvin">
     <div class="media">
-      <img src="assets/images/radiators/plastic-aluminium.webp" alt="Changan Alsvin Radiator" onerror="if(!this.dataset.tried){this.dataset.tried='1';this.src='assets/images/radiators/plastic-aluminum.webp';}else{this.remove();}">
+      <img src="assets/optimized/plastic-aluminium.webp" loading="lazy" width="640" height="427" alt="Representative radiator image for Changan Alsvin Radiator">
     </div>
     <h3 class="card__title">Alsvin</h3>
     <p class="card__text">Master Changan &bull; Plastic-Aluminum</p>
@@ -187,7 +196,7 @@
   <!-- Haval H6 -->
   <a class="card" href="products.html?make=Haval&amp;model=H6">
     <div class="media">
-      <img src="assets/images/radiators/all-aluminium.webp" alt="Haval H6 Radiator" onerror="if(!this.dataset.tried){this.dataset.tried='1';this.src='assets/images/radiators/all-aluminum.webp';}else{this.remove();}">
+      <img src="assets/optimized/all-aluminium.webp" loading="lazy" width="640" height="427" alt="Representative radiator image for Haval H6 Radiator">
     </div>
     <h3 class="card__title">H6 / H6 HEV</h3>
     <p class="card__text">Sazgar Haval &bull; All-Aluminum</p>
@@ -197,27 +206,16 @@
 
 <footer class="footer" id="contact"><div class="container">
 <div class="footer__grid">
-<div><h2>ACC <span>Radiators</span></h2><p>Private Limited</p><p style="margin-top:var(--s3)">Aftermarket and OEM-replacement radiators engineered for Pakistan's harsh climate.</p></div>
+<div><h2>ACC <span>Radiators</span></h2><p style="margin-top:var(--s3)">Explore our radiator catalog and contact ACC for product details.</p></div>
 <ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="products.html">Products</a></li></ul>
-<div><p><strong>Distribution hubs</strong></p><p>Lahore | Karachi</p><p>info@accradiators.pk</p></div>
+<div><p><strong>Contact ACC</strong></p><p><a href="mailto:info@accradiators.pk">info@accradiators.pk</a></p><p>No email app? Copy this address into your webmail and include your vehicle, model year and part number.</p></div>
 </div>
 <p class="footer__copy">&copy; 2026 ACC Radiators. All rights reserved.</p>
 </div></footer>
 
-<script>
-(function(){
-var data={Suzuki:["Alto","Cultus","Wagon R","Swift","Bolan","Ravi"],Toyota:["Corolla","Yaris","Fortuner","Hilux","Corolla Cross"],Honda:["Civic","City","BR-V","HR-V"],Hyundai:["Elantra","Sonata","Tucson","Porter H-100","Santa Fe"],KIA:["Sportage","Picanto","Stonic","Sorento"],Changan:["Alsvin","Karvaan","Oshan X7"],Haval:["H6","Jolion"],MG:["HS","ZS"]};
-var make=document.getElementById("make"),model=document.getElementById("model");
-Object.keys(data).forEach(function(m){make.add(new Option(m,m))});
-make.addEventListener("change",function(){
-model.length=1;model.disabled=!make.value;
-(data[make.value]||[]).forEach(function(n){model.add(new Option(n,n))});
-});
-document.getElementById("lookup").addEventListener("submit",function(e){
-e.preventDefault();
-location.href="products.html?make="+encodeURIComponent(make.value)+"&model="+encodeURIComponent(model.value);
-});
-})();
-</script>
+<script src="site.js" defer></script>
+<script src="catalog-data.js" defer></script>
+<script src="catalog-core.js" defer></script>
+<script src="lookup.js" defer></script>
 </body>
 </html>

@@ -2,7 +2,7 @@
    Markup: [data-slider] > .slider__btn[data-dir="-1"] + .slider__track + .slider__btn[data-dir="1"] */
 (function () {
   var DRAG_THRESHOLD = 5; // px of movement before a press counts as a drag, not a click
-  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
   function init(root) {
     var track = root.querySelector(".slider__track");
@@ -19,10 +19,22 @@
     }
 
     function page(dir) {
-      track.scrollBy({ left: dir * track.clientWidth, behavior: reduceMotion ? "auto" : "smooth" });
+      track.scrollBy({ left: dir * track.clientWidth, behavior: reduceMotion.matches ? "auto" : "smooth" });
     }
     prev.addEventListener("click", function () { page(-1); });
     next.addEventListener("click", function () { page(1); });
+    track.addEventListener("keydown", function (e) {
+      var buttons = Array.from(track.querySelectorAll("button"));
+      var index = buttons.indexOf(document.activeElement);
+      if (index < 0) return;
+      var target = index;
+      if (e.key === "ArrowRight") target = Math.min(index + 1, buttons.length - 1);
+      else if (e.key === "ArrowLeft") target = Math.max(index - 1, 0);
+      else if (e.key === "Home") target = 0;
+      else if (e.key === "End") target = buttons.length - 1;
+      else return;
+      e.preventDefault(); buttons[target].focus();
+    });
 
     /* mouse drag (touch and trackpad swipes already scroll natively) */
     var startX = 0, startLeft = 0, pressed = false, moved = false;
@@ -56,6 +68,7 @@
     /* a drag must not also select the logo under the cursor */
     track.addEventListener("click", function (e) {
       if (moved) {
+        if (e.detail === 0) { moved = false; return; }
         e.preventDefault();
         e.stopPropagation();
         moved = false;

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Review-only template. Replace CANONICAL_ORIGIN with the confirmed HTTPS
+     origin (no trailing slash), then save as sitemap.xml. Do not publish this template. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>CANONICAL_ORIGIN/</loc></url>
+  <url><loc>CANONICAL_ORIGIN/about.html</loc></url>
+  <url><loc>CANONICAL_ORIGIN/products.html</loc></url>
+</urlset>
