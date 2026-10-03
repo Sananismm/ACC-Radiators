@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Browse ACC Radiators by manufacturer, model and material.">
+<title>Radiator Catalog | ACC Radiators</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header"><div class="container header__inner">
+<a class="header__logo" href="index.html"><img src="logo.png" alt="ACC Radiators logo"></a>
+<nav class="nav" aria-label="Main">
+<a class="nav__link" href="index.html">Home</a>
+<a class="nav__link" href="about.html">About Us</a>
+<a class="nav__link nav__link--active" href="products.html">Products</a>
+<a class="nav__link" href="index.html#contact">Contact</a>
+<a class="btn" href="products.html">Find Your Radiator</a>
+</nav></div></header>
+
+<main class="section"><div class="container">
+<h1 class="section__title">Radiator <span>catalog</span></h1>
+<p class="section__intro">Filter by manufacturer, model and material, or search by model or part number.</p>
+<input class="input" id="q" type="search" placeholder="Search model or part number" aria-label="Search" style="width:100%;max-width:420px;margin-bottom:var(--s5)">
+<div class="filters">
+<div class="filters__block">
+<span class="filters__label">Manufacturer</span>
+<div class="slider" data-slider>
+<button class="slider__btn slider__btn--prev" type="button" aria-label="Previous manufacturers" data-dir="-1">&#8249;</button>
+<div class="slider__track" id="makes" role="group" aria-label="Car manufacturers">
+  <button type="button" class="logo is-text" data-v="All" data-key="make" aria-label="All manufacturers">
+    <span class="logo__name">All brands</span>
+  </button>
+  <button type="button" class="logo" data-v="Suzuki" data-key="make" aria-label="Suzuki">
+    <img src="assets/products/suzuki-logo.webp" alt="Suzuki" draggable="false" onerror="if(this.dataset.fallback){this.remove();this.parentElement.classList.add('is-text');}else{this.dataset.fallback='1';this.src='assets/products/carcompany.webp';}">
+    <span class="logo__name">Suzuki</span>
+  </button>
+  <button type="button" class="logo" data-v="Toyota" data-key="make" aria-label="Toyota">
+    <img src="assets/products/toyota-logo.webp" alt="Toyota" draggable="false" onerror="if(this.dataset.fallback){this.remove();this.parentElement.classList.add('is-text');}else{this.dataset.fallback='1';this.src='assets/products/carcompany.webp';}">
+    <span class="logo__name">Toyota</span>
+  </button>
+  <button type="button" class="logo" data-v="Honda" data-key="make" aria-label="Honda">
+    <img src="assets/products/honda-logo.webp" alt="Honda" draggable="false" onerror="if(this.dataset.fallback){this.remove();this.parentElement.classList.add('is-text');}else{this.dataset.fallback='1';this.src='assets/products/carcompany.webp';}">
+    <span class="logo__name">Honda</span>
+  </button>
+  <button type="button" class="logo" data-v="Hyundai" data-key="make" aria-label="Hyundai">
+    <img src="assets/products/hyundai-logo.webp" alt="Hyundai" draggable="false" onerror="if(this.dataset.fallback){this.remove();this.parentElement.classList.add('is-text');}else{this.dataset.fallback='1';this.src='assets/products/carcompany.webp';}">
+    <span class="logo__name">Hyundai</span>
+  </button>
+  <button type="button" class="logo" data-v="KIA" data-key="make" aria-label="KIA">
+    <img src="assets/products/kia-logo.webp" alt="KIA" draggable="false" onerror="if(this.dataset.fallback){this.remove();this.parentElement.classList.add('is-text');}else{this.dataset.fallback='1';this.src='assets/products/carcompany.webp';}">
+    <span class="logo__name">KIA</span>
+  </button>
+  <button type="button" class="logo" data-v="Changan" data-key="make" aria-label="Changan">
+    <img src="assets/products/changan-logo.webp" alt="Changan" draggable="false" onerror="if(this.dataset.fallback){this.remove();this.parentElement.classList.add('is-text');}else{this.dataset.fallback='1';this.src='assets/products/carcompany.webp';}">
+    <span class="logo__name">Changan</span>
+  </button>
+  <button type="button" class="logo" data-v="Haval" data-key="make" aria-label="Haval">
+    <img src="assets/products/haval-logo.webp" alt="Haval" draggable="false" onerror="if(this.dataset.fallback){this.remove();this.parentElement.classList.add('is-text');}else{this.dataset.fallback='1';this.src='assets/products/carcompany.webp';}">
+    <span class="logo__name">Haval</span>
+  </button>
+</div>
+<button class="slider__btn slider__btn--next" type="button" aria-label="Next manufacturers" data-dir="1">&#8250;</button>
+</div></div>
+<div class="filters__row"><span class="filters__label">Model</span><select class="select" id="model" aria-label="Model"><option value="">All models</option></select></div>
+<div class="filters__row"><span class="filters__label">Material</span><span id="mats" class="filters__row"></span></div>
+</div>
+<div class="grid grid--3" id="grid"></div>
+<p class="empty" id="empty">No radiators match. Clear a filter or search by part number.</p>
+</div></main>
+
+<footer class="footer"><div class="container">
+<p>ACC Radiators (Private Limited) | Lahore | Karachi | info@accradiators.pk</p>
+<p class="footer__copy">&copy; 2026 ACC Radiators. All rights reserved.</p>
+</div></footer>
+
+<script>
+(function(){
+var P=[
+["Suzuki","Alto","Suzuki Alto 660cc (2019-2024)","suzuki-alto","Plastic-Aluminum","Brazed Aluminum Core | Plastic Tanks","Manual / AGS","ACC-SZ-0660",16],
+["Suzuki","Cultus","Suzuki Cultus (2017-2024)","suzuki-cultus","Plastic-Aluminum","Brazed Aluminum Core | Plastic Tanks","Manual / AGS","ACC-SZ-0998",16],
+["Suzuki","Bolan","Suzuki Bolan (2000-2024)","suzuki-bolan","Copper-Brass","Copper-Brass Core | Brass Tanks","Manual","ACC-SZ-0796",26],
+["Toyota","Corolla","Toyota Corolla Altis (2014-2024)","toyota-corolla","Plastic-Aluminum","Brazed Aluminum Core | Plastic Tanks","Automatic (CVT) with Oil Cooler / Manual","ACC-TY-0824",16],
+["Toyota","Yaris","Toyota Yaris (2020-2024)","toyota-yaris","Plastic-Aluminum","Brazed Aluminum Core | Plastic Tanks","Automatic (CVT) with Oil Cooler / Manual","ACC-TY-0920",16],
+["Toyota","Hilux","Toyota Hilux / Revo (2016-2024)","toyota-hilux","All-Aluminum","TIG-Welded All-Aluminum Core","Automatic with Oil Cooler / Manual","ACC-TY-1635",32],
+["Honda","Civic","Honda Civic Oriel / Turbo (2016-2024)","honda-civic","Plastic-Aluminum","Brazed Aluminum Core | Plastic Tanks","Automatic (CVT) with Oil Cooler","ACC-HN-1630",16],
+["Honda","City","Honda City 1.2 / 1.5 (2009-2024)","honda-city","Plastic-Aluminum","Brazed Aluminum Core | Plastic Tanks","Automatic (CVT) with Oil Cooler / Manual","ACC-HN-1225",16],
+["Hyundai","Tucson","Hyundai Tucson (2020-2024)","hyundai-tucson","All-Aluminum","TIG-Welded All-Aluminum Core","Automatic with Oil Cooler","ACC-HY-2036",34],
+["KIA","Sportage","KIA Sportage (2019-2024)","kia-sportage","All-Aluminum","TIG-Welded All-Aluminum Core","Automatic with Oil Cooler","ACC-KI-1934",34],
+["Changan","Alsvin","Changan Alsvin (2021-2024)","changan-alsvin","Plastic-Aluminum","Brazed Aluminum Core | Plastic Tanks","Automatic (DCT) with Oil Cooler / Manual","ACC-CH-2116",16],
+["Haval","H6","Haval H6 / H6 HEV (2021-2024)","haval-h6","All-Aluminum","TIG-Welded All-Aluminum Core","Automatic (DCT) with Oil Cooler","ACC-HV-2136",34]
+];
+
+var RAD_IMG = {
+  "Plastic-Aluminum": "assets/images/radiators/plastic-aluminium.webp",
+  "All-Aluminum": "assets/images/radiators/all-aluminium.webp",
+  "Copper-Brass": "assets/images/radiators/copper-brass.webp"
+};
+
+var MATS=["All","Plastic-Aluminum","All-Aluminum","Copper-Brass"];
+var state={make:"All",model:"",mat:"All",q:""};
+var grid=document.getElementById("grid"),msel=document.getElementById("model"),qi=document.getElementById("q");
+var logoButtons=document.querySelectorAll("#makes .logo");
+var makes=Array.prototype.map.call(logoButtons,function(b){return b.dataset.v});
+
+function chips(id,list,key){
+var box=document.getElementById(id);
+list.forEach(function(v){
+var b=document.createElement("button");b.type="button";b.className="chip";b.textContent=v;b.dataset.v=v;b.dataset.key=key;
+b.addEventListener("click",function(){state[key]=v;render()});
+box.appendChild(b);
+});
+}
+
+function bindLogos(){
+logoButtons.forEach(function(b){
+var v=b.dataset.v;
+b.addEventListener("click",function(){state.make=v;state.model="";fillModels();render()});
+});
+}
+
+function fillModels(){
+msel.length=1;
+P.filter(function(p){return state.make==="All"||p[0]===state.make}).forEach(function(p){msel.add(new Option(p[1],p[1]))});
+msel.value=state.model;
+}
+
+function esc(s){return s.replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+
+P.forEach(function(p){
+var a=document.createElement("article");a.className="card product";
+var radSrc = RAD_IMG[p[4]] || "assets/images/radiators/all-aluminium.webp";
+
+/* Removed vehicle title text inside .media to prevent background text showing behind images */
+a.innerHTML='<div class="media">' +
+'<img src="'+radSrc+'" alt="'+esc(p[2])+' Radiator" onerror="if(!this.dataset.tried){this.dataset.tried=\'1\';this.src=this.src.replace(\'aluminium\',\'aluminum\');}else{this.remove();}">' +
+'</div>' +
+'<span class="badge">'+p[0]+'</span><h3 class="card__title">'+esc(p[2])+'</h3>'+
+'<ul class="product__meta"><li><strong>Core:</strong> '+p[5]+'</li><li><strong>Transmission:</strong> '+p[6]+'</li><li><strong>Part:</strong> '+p[7]+' | '+p[8]+'mm Core</li></ul>'+
+'<p class="product__stock">In Stock / Wholesale Pricing Available</p>'+
+'<a class="btn" href="index.html#contact">Inquire / Order Now</a>';
+a.dataset.make=p[0];a.dataset.model=p[1];a.dataset.mat=p[4];a.dataset.text=(p[2]+" "+p[7]).toLowerCase();
+grid.appendChild(a);
+});
+
+function render(){
+var n=0;
+Array.prototype.forEach.call(grid.children,function(c){
+var ok=(state.make==="All"||c.dataset.make===state.make)&&(!state.model||c.dataset.model===state.model)&&(state.mat==="All"||c.dataset.mat===state.mat)&&c.dataset.text.indexOf(state.q)>-1;
+c.hidden=!ok;if(ok)n++;
+});
+document.querySelectorAll(".chip,.logo").forEach(function(b){b.setAttribute("aria-pressed",state[b.dataset.key]===b.dataset.v)});
+document.getElementById("empty").style.display=n?"none":"block";
+}
+
+bindLogos();chips("mats",MATS,"mat");fillModels();
+msel.addEventListener("change",function(){state.model=msel.value;render()});
+qi.addEventListener("input",function(){state.q=qi.value.trim().toLowerCase();render()});
+var u=new URLSearchParams(location.search);
+if(makes.indexOf(u.get("make"))>0){state.make=u.get("make");fillModels();if(u.get("model")){state.model=u.get("model");msel.value=state.model;if(msel.value!==state.model)state.model=""}}
+render();
+})();
+</script>
+<script src="slider.js"></script>
+</body>
+</html>
